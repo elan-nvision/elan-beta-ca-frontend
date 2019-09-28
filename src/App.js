@@ -175,7 +175,7 @@ class LoggedIn extends React.Component {
       headers: {
         "Content-Type": "application/json",
         authorization: "Bearer " + localStorage.getItem("access_token"),
-        Id_token: localStorage.getItem("id_token")
+        "Proxy-Authorization": localStorage.getItem("id_token")
       }
     };
     let url =
