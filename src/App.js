@@ -135,7 +135,7 @@ class LoggedIn extends React.Component {
   }
   componentDidMount() {
     let requestURL =
-      "http://localhost:8080/doesuserexist/" +
+      "https://ca.elan.org.in/doesuserexist/" +
       JSON.parse(localStorage.getItem("email")).email;
     axios.get(requestURL).then(res => {
       this.setState({ firstTime: !(res.data.message == "true") });
@@ -158,7 +158,7 @@ class LoggedIn extends React.Component {
         Id_token: localStorage.getItem("id_token")
       }
     };
-    let url = "http://localhost:8080/api/private";
+    let url = "https://ca.elan.org.in/api/private";
     axios.get(url, headers).then(res => {
       this.setState({
         fname: res.data.fname,
@@ -179,7 +179,7 @@ class LoggedIn extends React.Component {
       }
     };
     let url =
-      "http://localhost:8080/api/private?fname=" +
+      "https://ca.elan.org.in/api/private?fname=" +
       this.state.fname +
       "&lname=" +
       this.state.lname +
