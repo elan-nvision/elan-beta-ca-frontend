@@ -154,11 +154,12 @@ class LoggedIn extends React.Component {
     const headers = {
       headers: {
         "Content-Type": "application/json",
-        authorization: "Bearer " + localStorage.getItem("access_token"),
-        Id_token: localStorage.getItem("id_token")
+        authorization: "Bearer " + localStorage.getItem("access_token")
       }
     };
-    let url = "https://ca.elan.org.in/api/private";
+    let url =
+      "https://ca.elan.org.in/api/private?token=" +
+      localStorage.getItem("id_token");
     axios.get(url, headers).then(res => {
       this.setState({
         fname: res.data.fname,
@@ -174,8 +175,7 @@ class LoggedIn extends React.Component {
     const headers = {
       headers: {
         "Content-Type": "application/json",
-        authorization: "Bearer " + localStorage.getItem("access_token"),
-        "Proxy-Authorization": localStorage.getItem("id_token")
+        authorization: "Bearer " + localStorage.getItem("access_token")
       }
     };
     let url =
@@ -186,7 +186,9 @@ class LoggedIn extends React.Component {
       "&institute=" +
       this.state.institute +
       "&age=" +
-      this.state.age;
+      this.state.age +
+      "&token=" +
+      localStorage.getItem("id_token");
     axios.get(url, headers).then(res => {
       window.location.reload();
     });
