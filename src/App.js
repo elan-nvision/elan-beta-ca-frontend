@@ -356,7 +356,7 @@ class LoggedIn extends React.Component {
                       <Input
                         type="text"
                         name="fbHandle"
-                        placeholder="Facebook Username"
+                        placeholder="Link to your Facebook Profile"
                         value={this.state.fbHandle}
                         onChange={this.handleInputChange}
                       />
@@ -417,10 +417,13 @@ class LoggedIn extends React.Component {
                 <h3 style={{ marginTop: "40px" }}>
                   Welcome, {this.state.fname} {this.state.lname}
                 </h3>
-                <h4>Your referral code is {this.state.rcode}.</h4>
+                {/* <h4>Your referral code is {this.state.rcode}.</h4>
                 <h4>
                   You have been awarded {this.state.points} points since{" "}
                   {this.state.no_of_people} people have used your referral code.
+                </h4> */}
+                <h4>
+                  Thanks for your application. We will get back to you soon!
                 </h4>
                 <Button color="primary" onClick={this.logout}>
                   LOGOUT
