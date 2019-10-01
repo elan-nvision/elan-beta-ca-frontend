@@ -1741,15 +1741,16 @@ form label {
 }
 
 .btn-primary {
-  background: #f08700;
-  color: #fff;
+  background: #fff;
+  color: #f08700;
   border: 2px solid #f08700;
 }
 .btn-primary:hover,
 .btn-primary:focus,
 .btn-primary:active {
-  background: #f366a3 !important;
-  border-color: #f366a3 !important;
+  background: #f08700 !important;
+  border-color: #f08700 !important;
+  color: #fff !important ;
 }
 .btn-primary.btn-outline {
   background: transparent;
