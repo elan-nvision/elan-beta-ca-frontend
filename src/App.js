@@ -253,15 +253,21 @@ class LoggedIn extends React.Component {
     let url =
       "https://ca.elan.org.in/api/private?token=" +
       localStorage.getItem("id_token");
-    axios.get(url, headers).then(res => {
-      this.setState({
-        fname: res.data.fname,
-        lname: res.data.lname,
-        no_of_people: res.data.no_of_people,
-        points: res.data.points,
-        rcode: res.data.rcode
+    axios
+      .get(url, headers)
+      .then(res => {
+        this.setState({
+          fname: res.data.fname,
+          lname: res.data.lname,
+          no_of_people: res.data.no_of_people,
+          points: res.data.points,
+          rcode: res.data.rcode
+        });
+      })
+      .catch(error => {
+        localStorage.clear();
+        window.location.reload();
       });
-    });
   }
   submitForm(event) {
     event.preventDefault();
