@@ -288,9 +288,15 @@ class LoggedIn extends React.Component {
       this.state.instaHandle +
       "&ideas=" +
       this.state.ideas;
-    axios.get(url, headers).then(res => {
-      window.location.reload();
-    });
+    axios
+      .get(url, headers)
+      .then(res => {
+        window.location.reload();
+      })
+      .catch(error => {
+        localStorage.clear();
+        window.location.reload();
+      });
   }
 
   renderForm() {
