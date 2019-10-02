@@ -81,7 +81,7 @@ class App extends React.Component {
 
   render() {
     return this.state.loggedIn === undefined ? (
-      <div className="loader">Loading</div>
+      <div class="fh5co-loader"></div>
     ) : (
       <this.renderBody />
     );
@@ -418,7 +418,7 @@ class LoggedIn extends React.Component {
   renderPoints() {
     if (this.state.no_of_people == null) {
       this.getData();
-      return <p>Loading</p>;
+      return <div class="fh5co-loader"></div>;
     } else {
       return (
         <div id="fh5co-couple" style={{ paddingTop: "20px" }}>
@@ -453,7 +453,7 @@ class LoggedIn extends React.Component {
     } else if (this.state.firstTime === false) {
       return <this.renderPoints />;
     } else {
-      return <p>Loading</p>;
+      return <div class="fh5co-loader"></div>;
     }
   }
 }
