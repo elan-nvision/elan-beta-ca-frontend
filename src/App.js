@@ -215,7 +215,8 @@ class LoggedIn extends React.Component {
     rcode: null,
     fbHandle: "",
     instaHandle: "",
-    ideas: ""
+    ideas: "",
+    contactNumber: ""
   };
   constructor(props) {
     super(props);
@@ -293,7 +294,9 @@ class LoggedIn extends React.Component {
       "&insta=" +
       this.state.instaHandle +
       "&ideas=" +
-      this.state.ideas;
+      this.state.ideas +
+      "&phone=" +
+      this.state.contactNumber;
     axios
       .get(url, headers)
       .then(res => {
@@ -394,6 +397,19 @@ class LoggedIn extends React.Component {
                         name="ideas"
                         placeholder="What are your ideas for publicising the fest?"
                         value={this.state.ideas}
+                        onChange={this.handleInputChange}
+                      />
+                    </FormGroup>
+                  </Col>
+                </Row>
+                <Row form>
+                  <Col md={12}>
+                    <FormGroup>
+                      <Input
+                        type="textarea"
+                        name="contactNumber"
+                        placeholder="Contact Number"
+                        value={this.state.contactNumber}
                         onChange={this.handleInputChange}
                       />
                     </FormGroup>
