@@ -467,12 +467,13 @@ class LoggedIn extends React.Component {
                   {this.state.no_of_people} people have used your referral code.
                 </h4> */}
                 <h4>
-                  Your referral code is {res.data.rcode}. When people use this
+                  Your referral code is {this.state.rcode}. When people use this
                   code to sign up, you will be awarded points.
                 </h4>
                 <h4>
-                  So far, {res.data.no_of_people} people have used your referral
-                  code and you've been awarded {res.data.points} points.
+                  So far, {this.state.no_of_people} people have used your
+                  referral code and you've been awarded {this.state.points}{" "}
+                  points.
                 </h4>
                 <Button color="primary" onClick={this.logout}>
                   LOGOUT
