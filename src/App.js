@@ -216,7 +216,8 @@ class LoggedIn extends React.Component {
     fbHandle: "",
     instaHandle: "",
     ideas: "",
-    contactNumber: ""
+    contactNumber: "",
+    referredBy: ""
   };
   constructor(props) {
     super(props);
@@ -296,7 +297,9 @@ class LoggedIn extends React.Component {
       "&ideas=" +
       this.state.ideas +
       "&phone=" +
-      this.state.contactNumber;
+      this.state.contactNumber +
+      "&referredBy=" +
+      this.state.referredBy;
     axios
       .get(url, headers)
       .then(res => {
@@ -415,6 +418,19 @@ class LoggedIn extends React.Component {
                     </FormGroup>
                   </Col>
                 </Row>
+                <Row form>
+                  <Col md={12}>
+                    <FormGroup>
+                      <Input
+                        type="textarea"
+                        name="referredBy"
+                        placeholder="Were you referred here by another CA? If yes, enter their referral code here. "
+                        value={this.state.referredBy}
+                        onChange={this.handleInputChange}
+                      />
+                    </FormGroup>
+                  </Col>
+                </Row>
                 <Row>
                   <Button color="primary" style={{ marginTop: "30px" }}>
                     Submit
@@ -451,7 +467,12 @@ class LoggedIn extends React.Component {
                   {this.state.no_of_people} people have used your referral code.
                 </h4> */}
                 <h4>
-                  Thanks for your application. We will get back to you soon!
+                  Your referral code is {res.data.rcode}. When people use this
+                  code to sign up, you will be awarded points.
+                </h4>
+                <h4>
+                  So far, {res.data.no_of_people} people have used your referral
+                  code and you've been awarded {res.data.points} points.
                 </h4>
                 <Button color="primary" onClick={this.logout}>
                   LOGOUT
