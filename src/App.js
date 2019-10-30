@@ -228,9 +228,11 @@ class Home extends React.Component {
               </li>
               <li>Certificates from Elan&nVision IIT Hyderabad</li>
             </ul>
-            <Button type="primary" size="large" onClick={this.authenticate}>
-              Register Now
-            </Button>
+            <div style={{ textAlign: "center" }}>
+              <Button type="primary" size="large" onClick={this.authenticate}>
+                LOG IN / REGISTER
+              </Button>
+            </div>
           </div>
         </Content>
         <Footer style={{ textAlign: "center" }}>
@@ -658,6 +660,9 @@ class LoggedIn extends React.Component {
                   get your friends to apply! <br /> <br />
                   The weightage (number of points) of this task will continue to
                   reduce. <br />
+                  <br />
+                  When your friend signs up with your referral code, they will
+                  be awarded 25 points as well.
                   <br />
                   [This task does not require submission of proof]
                 </Card>
