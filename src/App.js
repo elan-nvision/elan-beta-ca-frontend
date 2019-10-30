@@ -621,9 +621,10 @@ class LoggedIn extends React.Component {
                   code to sign up, you will be awarded points.
                 </h4>
                 <h4>
-                  So far, {this.state.no_of_people} people have used your
-                  referral code and you've been awarded {this.state.points}{" "}
-                  points.
+                  So far, {this.state.no_of_people}{" "}
+                  {this.state.no_of_people == 1 ? "person has" : "people have"}{" "}
+                  used your referral code and you've been awarded{" "}
+                  {this.state.points} points.
                 </h4>
                 <Button
                   type="primary"
