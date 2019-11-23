@@ -669,8 +669,10 @@ class LoggedIn extends React.Component {
                 </Card>
                 <br />
                 <Card
+                  body
                   title="Task 2 has expired"
                   style={{ fontSize: "1.8rem" }}
+                  inverse
                   color="danger"
                 >
                   ELAN & Nvision 2020's first online event- The Online LitFest
