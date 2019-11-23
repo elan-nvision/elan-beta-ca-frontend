@@ -668,7 +668,11 @@ class LoggedIn extends React.Component {
                   [This task does not require submission of proof]
                 </Card>
                 <br />
-                <Card title="Task 2" style={{ fontSize: "1.8rem" }}>
+                <Card
+                  title="Task 2 has expired"
+                  style={{ fontSize: "1.8rem" }}
+                  color="danger"
+                >
                   ELAN & Nvision 2020's first online event- The Online LitFest
                   is now live! Share and spread the word! <br />
                   <br />
