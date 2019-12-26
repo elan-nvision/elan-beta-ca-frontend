@@ -209,7 +209,7 @@ class Home extends React.Component {
               <li>Age requirement: 17 or above.</li>
               <li>Good communication, management and soft skills. </li>
               <li>
-                Must be enrolled in an internship course by <a href="https://elan.org.in/internship">Verzeo</a>
+                Must be enrolled in an educational institution(school or college)
               </li>
             </ul>
             <p style={{ textAlign: "left" }}>Incentives:</p>
@@ -226,6 +226,7 @@ class Home extends React.Component {
                 platforms and official website
               </li>
               <li>Certificates from Elan&nVision IIT Hyderabad</li>
+              <li>Internship courses by <a href="https://elan.org.in/internship">Verzeo</a></li>
             </ul>
             <div style={{ textAlign: "center" }}>
               <Button type="primary" size="large" onClick={this.authenticate}>
