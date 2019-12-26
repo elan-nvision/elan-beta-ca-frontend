@@ -209,8 +209,7 @@ class Home extends React.Component {
               <li>Age requirement: 17 or above.</li>
               <li>Good communication, management and soft skills. </li>
               <li>
-                Must be enrolled in an educational institute. (school or
-                college)
+                Must be enrolled in an internship course by <a href="https://elan.org.in/internship">Verzeo</a>
               </li>
             </ul>
             <p style={{ textAlign: "left" }}>Incentives:</p>
