@@ -691,6 +691,43 @@ class LoggedIn extends React.Component {
                   Additional points will be allotted when proof of other
                   offline/online publicity is presented to the organisers.
                 </Card>
+                <Card
+                  body
+                  title="Task 3"
+                  style={{ fontSize: "1.8rem" }}
+                  inverse
+                  color="danger"
+                >
+                  Elan and Nvision 2020- Into Elysium themed tshirts are now up for sale! Get some of these tshirts for you and your friends and win some CA points in the process.  <br />
+                  <br />
+                  For every tshirt ordered using your CA referral code, you earn 20 CA points. 
+For every 9 tshirts ordered using your CA referral code, you receive 1 tshirt free. You can either choose to get it delivered or pick it up when you come to the fest. 
+ <br />
+                  <br />
+                  T&Cs-  <br />
+                  A maximum of 360 points can be earned and a maximum of 2 free tshirts per CA can be won through this task. 
+                </Card>
+                <br />
+                <Card
+                  body
+                  title="Task 4"
+                  style={{ fontSize: "1.8rem" }}
+                  inverse
+                  color="danger"
+                >
+                  Make some noise! Elan and Nvision 2020 is just 50 days away! <br />
+                  <br />
+                  Share the 50 days to go poster from Elan & Nvision's Facebook/Insta page.  <br />
+                  <br />
+                  Facebook story: 25 <br />
+                  Facebook post: 35 <br />
+                  Instagram story: 35
+                  <br />
+                  Instagram post: 50 <br />
+                  Whatsapp story: 35 <br />
+                  <br />
+                  Additional points will be allotted when proof of other offline/online publicity is presented to the organisers. 
+                </Card>
               </div>
               <div
                 class="home"
