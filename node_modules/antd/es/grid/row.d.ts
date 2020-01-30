@@ -21,8 +21,8 @@ export default class Row extends React.Component<RowProps, RowState> {
     };
     static propTypes: {
         type: PropTypes.Requireable<"flex">;
-        align: PropTypes.Requireable<"top" | "middle" | "bottom" | "stretch">;
-        justify: PropTypes.Requireable<"start" | "center" | "end" | "space-around" | "space-between">;
+        align: PropTypes.Requireable<"stretch" | "bottom" | "top" | "middle">;
+        justify: PropTypes.Requireable<"space-around" | "space-between" | "center" | "end" | "start">;
         className: PropTypes.Requireable<string>;
         children: PropTypes.Requireable<PropTypes.ReactNodeLike>;
         gutter: PropTypes.Requireable<number | object>;

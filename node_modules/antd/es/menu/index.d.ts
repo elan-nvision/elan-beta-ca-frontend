@@ -56,7 +56,7 @@ export interface MenuState {
     prevProps: InternalMenuProps;
 }
 export default class Menu extends React.Component<MenuProps, {}> {
-    static Divider: React.FunctionComponent<import("rc-menu/lib/Divider").DividerProps>;
+    static Divider: React.FC<import("rc-menu/lib/Divider").DividerProps>;
     static Item: typeof Item;
     static SubMenu: typeof SubMenu;
     static ItemGroup: typeof ItemGroup;

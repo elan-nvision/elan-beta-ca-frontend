@@ -52,7 +52,7 @@ export default class TransferList extends React.Component<TransferListProps, Tra
     constructor(props: TransferListProps);
     shouldComponentUpdate(...args: any[]): any;
     componentWillUnmount(): void;
-    getCheckStatus(filteredItems: TransferItem[]): "all" | "none" | "part";
+    getCheckStatus(filteredItems: TransferItem[]): "none" | "all" | "part";
     getFilteredItems(dataSource: TransferItem[], filterValue: string): {
         filteredItems: TransferItem[];
         filteredRenderItems: RenderedItem[];

@@ -52,7 +52,7 @@ declare class Button extends React.Component<ButtonProps, ButtonState> {
     };
     static propTypes: {
         type: PropTypes.Requireable<string>;
-        shape: PropTypes.Requireable<"round" | "circle" | "circle-outline">;
+        shape: PropTypes.Requireable<"circle" | "round" | "circle-outline">;
         size: PropTypes.Requireable<"small" | "default" | "large">;
         htmlType: PropTypes.Requireable<"button" | "reset" | "submit">;
         onClick: PropTypes.Requireable<(...args: any[]) => any>;

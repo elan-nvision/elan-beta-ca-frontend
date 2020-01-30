@@ -47,13 +47,13 @@ declare class CheckboxGroup extends React.Component<CheckboxGroupProps, Checkbox
         checkboxGroup: PropTypes.Requireable<any>;
     };
     static getDerivedStateFromProps(nextProps: CheckboxGroupProps): {
-        value: (string | number | boolean)[];
+        value: CheckboxValueType[];
     } | null;
     constructor(props: CheckboxGroupProps);
     getChildContext(): {
         checkboxGroup: {
             toggleOption: (option: CheckboxOptionType) => void;
-            value: (string | number | boolean)[];
+            value: CheckboxValueType[];
             disabled: boolean | undefined;
             name: string | undefined;
             registerValue: (value: string) => void;

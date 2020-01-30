@@ -209,7 +209,8 @@ class Home extends React.Component {
               <li>Age requirement: 17 or above.</li>
               <li>Good communication, management and soft skills. </li>
               <li>
-                Must be enrolled in an educational institution(school or college)
+                Must be enrolled in an educational institution(school or
+                college)
               </li>
             </ul>
             <p style={{ textAlign: "left" }}>Incentives:</p>
@@ -226,7 +227,10 @@ class Home extends React.Component {
                 platforms and official website
               </li>
               <li>Certificates from Elan&nVision IIT Hyderabad</li>
-              <li>Internship courses by <a href="https://elan.org.in/internship">Verzeo</a></li>
+              <li>
+                Internship courses by{" "}
+                <a href="https://elan.org.in/internship">Verzeo</a>
+              </li>
             </ul>
             <div style={{ textAlign: "center" }}>
               <Button type="primary" size="large" onClick={this.authenticate}>
@@ -691,6 +695,7 @@ class LoggedIn extends React.Component {
                   Additional points will be allotted when proof of other
                   offline/online publicity is presented to the organisers.
                 </Card>
+                <br />
                 <Card
                   body
                   title="Task 3"
@@ -698,26 +703,33 @@ class LoggedIn extends React.Component {
                   inverse
                   color="danger"
                 >
-                  Elan and Nvision 2020- Into Elysium themed tshirts are now up for sale! Get some of these tshirts for you and your friends and win some CA points in the process.  <br />
+                  Elan and Nvision 2020- Into Elysium themed tshirts are now up
+                  for sale! Get some of these tshirts for you and your friends
+                  and win some CA points in the process. <br />
                   <br />
-                  For every tshirt ordered using your CA referral code, you earn 20 CA points. 
-For every 9 tshirts ordered using your CA referral code, you receive 1 tshirt free. You can either choose to get it delivered or pick it up when you come to the fest. 
- <br />
+                  For every tshirt ordered using your CA referral code, you earn
+                  20 CA points. For every 9 tshirts ordered using your CA
+                  referral code, you receive 1 tshirt free. You can either
+                  choose to get it delivered or pick it up when you come to the
+                  fest.
                   <br />
-                  T&Cs-  <br />
-                  A maximum of 360 points can be earned and a maximum of 2 free tshirts per CA can be won through this task. 
+                  <br />
+                  T&Cs- <br />A maximum of 360 points can be earned and a
+                  maximum of 2 free tshirts per CA can be won through this task.
                 </Card>
                 <br />
                 <Card
                   body
-                  title="Task 4"
+                  title="Task 4 has expired"
                   style={{ fontSize: "1.8rem" }}
                   inverse
                   color="danger"
                 >
-                  Make some noise! Elan and Nvision 2020 is just 50 days away! <br />
+                  Make some noise! Elan and Nvision 2020 is just 50 days away!{" "}
                   <br />
-                  Share the 50 days to go poster from Elan & Nvision's Facebook/Insta page.  <br />
+                  <br />
+                  Share the 50 days to go poster from Elan & Nvision's
+                  Facebook/Insta page. <br />
                   <br />
                   Facebook story: 25 <br />
                   Facebook post: 35 <br />
@@ -726,7 +738,137 @@ For every 9 tshirts ordered using your CA referral code, you receive 1 tshirt fr
                   Instagram post: 50 <br />
                   Whatsapp story: 35 <br />
                   <br />
-                  Additional points will be allotted when proof of other offline/online publicity is presented to the organisers. 
+                  Additional points will be allotted when proof of other
+                  offline/online publicity is presented to the organisers.
+                </Card>
+                <br />
+                <Card
+                  body
+                  title="Task 5"
+                  style={{ fontSize: "1.8rem" }}
+                  inverse
+                  color="danger"
+                >
+                  The overall posters for the techy and culti events are out!
+                  <br />
+                  <br />
+                  Share them from the Facebook/insta pages of the fest. <br />
+                  <br />
+                  Facebook story: 35 <br />
+                  Facebook post: 45 <br />
+                  Instagram story: 45
+                  <br />
+                  Instagram post: 60 <br />
+                  Whatsapp story: 45 <br />
+                  <br />
+                  For EACH of the two overall posters shared, above will be the
+                  points scheme. Also, share the individual event posters from
+                  the Facebook page. Each story/post of an individual event
+                  gives you an additional 10 points.
+                </Card>
+                <br />
+                <Card
+                  body
+                  title="Task 6"
+                  style={{ fontSize: "1.8rem" }}
+                  inverse
+                  color="danger"
+                >
+                  We've released the workshops to be held during the fest!
+                  <br />
+                  <br />
+                  Share the{" "}
+                  <a href="https://m.facebook.com/story.php?story_fbid=2685069344880733&id=219674534753572">
+                    poster
+                  </a>
+                  . <br />
+                  <br />
+                  Facebook story: 35 <br />
+                  Facebook post: 45 <br />
+                  Instagram story: 45
+                  <br />
+                  Instagram post: 60 <br />
+                  Whatsapp story: 45 <br />
+                </Card>
+                <br />
+                <Card
+                  body
+                  title="Task 7"
+                  style={{ fontSize: "1.8rem" }}
+                  inverse
+                  color="danger"
+                >
+                  Register for ELAN & Nvision 2020.
+                  <br />
+                  <br />
+                  The entry passes for ELAN & Nvision are now live! Click{" "}
+                  <a href="https://eventbeep.com/fest/elan_culti2020?category=Entertainment&event=entry">
+                    here
+                  </a>{" "}
+                  to get yours now! . <br />
+                  <br />
+                  <ol>
+                    <li>
+                      Use this{" "}
+                      <a href="https://eventbeep.com/fest/elan_culti2020?category=Entertainment&event=entry">
+                        link
+                      </a>{" "}
+                      to register for the fest and pay the entry fee. Click on
+                      Register, and then Pay Now.
+                    </li>
+                    <li>
+                      Fill the form with the personal details and click on
+                      continue as guest. An option to fill in a reference code
+                      will appear.
+                    </li>
+                  </ol>
+                  Your reference code is your CA referral code. <br />
+                  <b>
+                    Ask your friends to use your reference code. Make sure they
+                    enter it in all caps and don't add a space at the end of the
+                    string. (Eg. “LOZXCZ” )
+                  </b>
+                  <br />
+                  As our CA, you have an additional perk. Get your friends to
+                  buy entry passes to the fest while using your CA referral
+                  code.{" "}
+                  <b>
+                    <i>
+                      And every 10 times your referral code is used, you win a
+                      free ELAN & Nvision tshirt, and every 20 times your
+                      referral code is used, you get a free ELAN & Nvision
+                      hoodie!
+                    </i>
+                  </b>{" "}
+                  <br />
+                  And for every person using your referral code, you earn 20
+                  points! Don’t miss this chance to become a top CA in a go!
+                  <br />
+                  (Note: Registering for events is independent of getting an
+                  entry ticket. Registration for events is free while the entry
+                  ticket is not. One entry ticket per head is enough for you to
+                  participate in any event of your choice)
+                </Card>
+                <br />
+                <Card
+                  body
+                  title="Task 8"
+                  style={{ fontSize: "1.8rem" }}
+                  inverse
+                  color="danger"
+                >
+                  15 days to go for a fiesta that will leave you exhilarated!
+                  <br />
+                  <br />
+                  Share the 15 days to go poster from Elan & Nvision's
+                  Facebook/Insta page. . <br />
+                  <br />
+                  Facebook story: 25 <br />
+                  Facebook post: 35 <br />
+                  Instagram story: 35
+                  <br />
+                  Instagram post: 50 <br />
+                  Whatsapp story: 35 <br />
                 </Card>
               </div>
               <div

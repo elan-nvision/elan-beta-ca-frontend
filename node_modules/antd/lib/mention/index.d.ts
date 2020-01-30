@@ -38,7 +38,7 @@ declare class Mention extends React.Component<MentionProps, MentionState> {
         notFoundContent: string;
         loading: boolean;
         multiLines: boolean;
-        placement: "top" | "bottom";
+        placement: "bottom" | "top";
     };
     static Nav: any;
     static toString: any;
