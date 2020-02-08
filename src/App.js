@@ -958,7 +958,7 @@ class LoggedIn extends React.Component {
                 style={{ marginTop: "20px", display: "none" }}
                 ref={this.leaderboardRef}
               >
-                <Table dataSource={this.state.dataSource} columns={columns} />;
+                <Table dataSource={this.state.dataSource} columns={columns} pagination={false}/>
               </div>
             </div>
           </Content>
