@@ -5,7 +5,7 @@ import auth0 from "auth0-js";
 import axios from "axios";
 import { thisExpression } from "@babel/types";
 import "antd/dist/antd.css";
-import { Layout, Menu, Card, Button, Icon } from "antd";
+import { Layout, Menu, Card, Button, Icon, Table} from "antd";
 import LogoElan from "./favicon.png";
 import { Typography } from "antd";
 
@@ -19,6 +19,26 @@ const AUTH0_CLIENT_ID = "7ypOoXT5lMAP6B3LRvGJoD3eK0tBTrai";
 const AUTH0_DOMAIN = "elan-nvision.auth0.com";
 const AUTH0_API_AUDIENCE = "https://elan-nvision.auth0.com/api/v2/";
 const AUTH0_CALLBACK_URL = globalRootURL;
+
+const columns = [
+    {
+        title: 'Rank',
+        dataIndex: 'rank',
+        key: 'rank'
+    },
+    {
+
+        title: 'Name',
+        dataIndex: 'name',
+        key: 'name'
+    },
+    {
+
+        title: 'Points',
+        dataIndex: 'points',
+        key: 'points'
+    }
+]
 
 class App extends React.Component {
   constructor() {
@@ -59,7 +79,7 @@ class App extends React.Component {
   }
   setup() {
     $.ajaxSetup({
-      beforeSend: function(xhr) {
+      beforeSend: function (xhr) {
         if (localStorage.getItem("access_token")) {
           xhr.setRequestHeader(
             "Authorization",
@@ -91,8 +111,8 @@ class App extends React.Component {
     return this.state.loggedIn === undefined ? (
       <div class="fh5co-loader"></div>
     ) : (
-      <this.renderBody />
-    );
+        <this.renderBody />
+      );
   }
 }
 
@@ -262,7 +282,8 @@ class LoggedIn extends React.Component {
     ideas: "",
     contactNumber: "",
     referredBy: "",
-    current: "home"
+    current: "home",
+    dataSource: null
   };
   constructor(props) {
     super(props);
@@ -276,6 +297,7 @@ class LoggedIn extends React.Component {
     this.homeRef = React.createRef();
     this.tasksRef = React.createRef();
     this.rulesRef = React.createRef();
+    this.leaderboardRef = React.createRef();
     this.setTasks = this.setTasks.bind(this);
   }
   setTasks() {
@@ -289,17 +311,26 @@ class LoggedIn extends React.Component {
       this.homeRef.current.style.display = "block";
       this.rulesRef.current.style.display = "none";
       this.tasksRef.current.style.display = "none";
+      this.leaderboardRef.current.style.display="none";
       this.setState({ current: "home" });
     } else if (e.item.node.innerText == "Tasks") {
       this.homeRef.current.style.display = "none";
       this.rulesRef.current.style.display = "none";
       this.tasksRef.current.style.display = "block";
+      this.leaderboardRef.current.style.display="none";
       this.setState({ current: "tasks" });
     } else if (e.item.node.innerText == "Rules") {
       this.homeRef.current.style.display = "none";
       this.rulesRef.current.style.display = "block";
       this.tasksRef.current.style.display = "none";
+      this.leaderboardRef.current.style.display="none";
       this.setState({ current: "rules" });
+    } else if (e.item.node.innerText == "leaderboard") {
+        this.homeRef.current.style.display = "none";
+      this.rulesRef.current.style.display = "none";
+      this.tasksRef.current.style.display = "none";
+      this.leaderboardRef.current.style.display="block";
+      this.setState({ current: "leaderboard" });
     }
   }
   componentDidMount() {
@@ -308,6 +339,20 @@ class LoggedIn extends React.Component {
       JSON.parse(localStorage.getItem("email")).email;
     axios.get(requestURL).then(res => {
       this.setState({ firstTime: !(res.data.message == "true") });
+    });
+    let dataSource = [];
+    axios.get('https://ca.elan.org.in/leaderboard').then(res => {
+        for (var i = 0 ; i < res.fname.length ; i++) {
+            dataSource.push({
+
+                key: i+1,
+
+                name: res.fname[i] + " " + res.lname[i],
+                points: res.points[i],
+                rank: i+1
+            })
+        }
+        this.setState({dataSource: dataSource})
     });
   }
   handleInputChange(event) {
@@ -876,33 +921,14 @@ class LoggedIn extends React.Component {
                 style={{ marginTop: "20px", display: "none" }}
                 ref={this.rulesRef}
               >
-                <ol>
-                  <li>
-                    Points are allotted by our organisers and the team's
-                    decision will be final.
-                  </li>
-                  <li>
-                    Organisers will soon make a WhatsApp group with the contact
-                    number you share with us and will keep you informed of all
-                    further tasks.{" "}
-                  </li>
-                  <li>
-                    The proofs of tasks completed should be sent to the
-                    organiser that contacts you.{" "}
-                  </li>
-                  <li>
-                    To submit proof of a task completed, you will be required to
-                    send a screenshot of the post/story after a minimum of 20
-                    hours of posting (on Instagram, a screenshot from the story
-                    archives), with the number of views/likes/comments clearly
-                    visible. Additional points maybe allotted based on the
-                    engagement your story/post receives.{" "}
-                  </li>
-                  <li>
-                    Feel free to communicate any ideas you have for publicising
-                    ELAN & Nvision and it's events with the organisers.{" "}
-                  </li>
-                </ol>
+                <Table dataSource={this.state.dataSource} columns={columns} />;
+              </div>
+              <div
+                class="home"
+                style={{ marginTop: "20px", display: "none" }}
+                ref={this.leaderboardRef}
+              >
+                
               </div>
             </div>
           </Content>
