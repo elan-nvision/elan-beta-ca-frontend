@@ -325,7 +325,7 @@ class LoggedIn extends React.Component {
       this.tasksRef.current.style.display = "none";
       this.leaderboardRef.current.style.display="none";
       this.setState({ current: "rules" });
-    } else if (e.item.node.innerText == "leaderboard") {
+    } else if (e.item.node.innerText == "Leaderboard") {
         this.homeRef.current.style.display = "none";
       this.rulesRef.current.style.display = "none";
       this.tasksRef.current.style.display = "none";
