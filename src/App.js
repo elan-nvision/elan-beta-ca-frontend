@@ -342,13 +342,13 @@ class LoggedIn extends React.Component {
     });
     let dataSource = [];
     axios.get('https://ca.elan.org.in/leaderboard').then(res => {
-        for (var i = 0 ; i < res.fname.length ; i++) {
+        for (var i = 0 ; i < res.data.fname.length ; i++) {
             dataSource.push({
 
                 key: i+1,
 
-                name: res.fname[i] + " " + res.lname[i],
-                points: res.points[i],
+                name: res.data.fname[i] + " " + res.data.lname[i],
+                points: res.data.points[i],
                 rank: i+1
             })
         }
