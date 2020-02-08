@@ -656,6 +656,10 @@ class LoggedIn extends React.Component {
                   <Icon type="book" />
                   Rules
                 </Menu.Item>
+                <Menu.Item key="leaderboard">
+                  <Icon type="database" />
+                  Leaderboard
+                </Menu.Item>
               </Menu>
               <div
                 class="home"
