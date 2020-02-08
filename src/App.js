@@ -5,7 +5,7 @@ import auth0 from "auth0-js";
 import axios from "axios";
 import { thisExpression } from "@babel/types";
 import "antd/dist/antd.css";
-import { Layout, Menu, Card, Button, Icon, Table} from "antd";
+import { Layout, Menu, Card, Button, Icon, Table } from "antd";
 import LogoElan from "./favicon.png";
 import { Typography } from "antd";
 
@@ -921,14 +921,40 @@ class LoggedIn extends React.Component {
                 style={{ marginTop: "20px", display: "none" }}
                 ref={this.rulesRef}
               >
-                <Table dataSource={this.state.dataSource} columns={columns} />;
+                <ol>
+                  <li>
+                    Points are allotted by our organisers and the team's
+                    decision will be fnal.
+                  </li>
+                  <li>
+                    Organisers will soon make a WhatsApp group with the contact
+                    number you share with us and will keep you informed of all
+                    further tasks.{" "}
+                  </li>
+                  <li>
+                    The proofs of tasks completed should be sent to the
+                    organiser that contacts you.{" "}
+                  </li>
+                  <li>
+                    To submit proof of a task completed, you will be required to
+                    send a screenshot of the post/story after a minimum of 20
+                    hours of posting (on Instagram, a screenshot from the story
+                    archives), with the number of views/likes/comments clearly
+                    visible. Additional points maybe allotted based on the
+                    engagement your story/post receives.{" "}
+                  </li>
+                  <li>
+                    Feel free to communicate any ideas you have for publicising
+                    ELAN & Nvision and it's events with the organisers.{" "}
+                  </li>
+                </ol>
               </div>
               <div
                 class="home"
                 style={{ marginTop: "20px", display: "none" }}
                 ref={this.leaderboardRef}
               >
-                
+                <Table dataSource={this.state.dataSource} columns={columns} />;
               </div>
             </div>
           </Content>
