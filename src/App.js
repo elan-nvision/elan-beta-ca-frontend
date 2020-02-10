@@ -705,7 +705,7 @@ class LoggedIn extends React.Component {
                 }}
                 ref={this.tasksRef}
               >
-                <Card title="Task 1" style={{ fontSize: "1.8rem" }}>
+                <Card title="Task 1 has expired" style={{ fontSize: "1.8rem" }}>
                   Your first task as a campus ambassador for ELAN and Nvision
                   2020 will be to get more campus ambassadors. With every
                   candidate that applies using your referral code, you get 50
@@ -901,7 +901,7 @@ class LoggedIn extends React.Component {
                 <br />
                 <Card
                   body
-                  title="Task 8"
+                  title="Task 8 has expired"
                   style={{ fontSize: "1.8rem" }}
                   inverse
                   color="danger"
@@ -919,6 +919,46 @@ class LoggedIn extends React.Component {
                   Instagram post: 50 <br />
                   Whatsapp story: 35 <br />
                 </Card>
+<Card
+                  body
+                  title="MEGA TASK"
+                  style={{ fontSize: "1.8rem" }}
+                  inverse
+                  color="danger"
+                >
+                  The Proshows line-up is now out!
+                  <br />
+                  <br />
+                  Share each of the proshows posters and win enough to top the leaderboard!
+This is the task you've been waiting for. 
+
+              <br />
+              <br />
+              
+          Posters:
+<ul>
+<li>When Chai Met Toast</li> 
+
+<li>Darshan Raval</li>
+
+<li>Abhishek Upmanyu</li>
+
+<li>Rave Republic</li>
+
+              <li>The Yellow Diary</li>
+
+          </ul>
+<br />
+(Visit the fest's fb/insta page)
+              <br />
+              Facebook story: 50 <br />
+              Facebook post: 70 <br />
+              Instagram story: 70
+              <br />
+              Instagram post: 100 <br />
+              Whatsapp story: 70 <br />
+              </Card>
+
               </div>
               <div
                 class="home"
