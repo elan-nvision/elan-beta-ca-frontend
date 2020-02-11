@@ -919,6 +919,7 @@ class LoggedIn extends React.Component {
                   Instagram post: 50 <br />
                   Whatsapp story: 35 <br />
                 </Card>
+<br />
 <Card
                   body
                   title="MEGA TASK"
@@ -957,6 +958,24 @@ This is the task you've been waiting for.
               <br />
               Instagram post: 100 <br />
               Whatsapp story: 70 <br />
+              </Card>
+<br />
+<Card
+                  body
+                  title="Task 9"
+                  style={{ fontSize: "1.8rem" }}
+                  inverse
+                  color="danger"
+                >
+                  Emblazon 4.0- the online art/photography contest. <a href="https://www.instagram.com/p/B8LOS_fgoYW/?igshid=p7f9jkoc8hy7">Click here</a> for the details of the competition. 
+                  <br />
+                  <br />
+                   You earn 100 CA points for each entry you post and submit!   
+
+ <br />
+ <br />
+ Also make your friends participate. Text your CA organiser a list of the mail IDs of your friends (the mail IDs they send the entry in from) and each verified entry from that list will get you an additional 20 points. What are you waiting for? Participate now! 
+ <br />
               </Card>
 
               </div>
